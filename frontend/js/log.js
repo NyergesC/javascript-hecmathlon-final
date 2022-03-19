@@ -25,9 +25,26 @@ class HECMAthlon {
 
         getGreaterThan = (input) => {
             return [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].filter(currentValue => currentValue > input)
+
         }
 
-    fizzBuzz = (input) => {
+        fizzBuzz = (input) => {
+            
+            
+            return Array.from({length: input}, (_, i) => i + 1).map(k => {
+                let output = []
+                let value;
+                if(k % 5 === 0 && k % 3 === 0) value = "FizzBuzz";
+                else if(k % 3 === 0) value = "Fizz";
+                else if(k % 5 === 0) value = "Buzz";
+                else value = k;
+                output.push(value);
+                
+                return output;
+            })
+        }
+
+    /* fizzBuzz = (input) => {
         let output = [];
         for (let k = 1; k <= parseInt(input); k++) {
             let value;
@@ -38,7 +55,7 @@ class HECMAthlon {
             output.push(value);
         }
         return output;
-    }
+    } */
 }
 
 
