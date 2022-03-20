@@ -28,21 +28,15 @@ class HECMAthlon {
 
         }
 
-        fizzBuzz = (input) => {
-            
+        fizzBuzz = (input) => {            
             
             return Array.from({length: input}, (_, i) => i + 1).map(k => {
-                let output = []
-                let value;
-                if(k % 5 === 0 && k % 3 === 0) value = "FizzBuzz";
-                else if(k % 3 === 0) value = "Fizz";
-                else if(k % 5 === 0) value = "Buzz";
-                else value = k;
-                output.push(value);
-                
-                return output;
-            })
-        }
+                return (k % 5 === 0 && k % 3 === 0) ? "FizzBuzz"
+                : (k % 3 === 0) ? "Fizz"
+                : (k % 5 === 0) ? "Buzz"
+                : k
+        })
+    }
 
     /* fizzBuzz = (input) => {
         let output = [];
@@ -88,14 +82,17 @@ const init = _ => {
     });
 }
 
-function getOutput(output) {
+getOutput = (output) =>
+    return  
+
+/* function getOutput(output) {
     let returnValue = ["The function starts"];
     for(var i = 0; i < output.length; i++){
         returnValue.push(output[i]);
     }
     returnValue.push("The function ends");
     return returnValue;
-}
+} */
 
 function logResult(place, values){
     while(place.firstChild) {
