@@ -11,7 +11,7 @@ class HECMAthlon {
         })
     }
 
-  /*   getMaxValue = (input) => {
+  /*  getMaxValue = (input) => {
         let maxValues = input.split(",");
         let maxValue = 0;
         for(let i = 0; i < maxValues.length; i++){
@@ -81,26 +81,28 @@ const init = _ => {
         logResult(fizzBuzzRoot, result);
     });
 }
-
+/* 
 getOutput = (output) =>
-    return  
+    return   */
 
-/* function getOutput(output) {
+  const getOutput = output => ["The function starts", ...output, "The function ends"]
+
+/*  function getOutput(output) {
     let returnValue = ["The function starts"];
     for(var i = 0; i < output.length; i++){
         returnValue.push(output[i]);
     }
     returnValue.push("The function ends");
     return returnValue;
-} */
-
+} 
+ */
 function logResult(place, values){
     while(place.firstChild) {
         place.firstChild.remove();
     }
     for (var j = 0; j < values.length; j++) {
         place.insertAdjacentHTML("beforeend", "<div>" + values[j] + "</div>");
-    }
-}
+    } 
+} 
 
 init();
